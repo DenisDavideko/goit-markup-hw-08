@@ -1,0 +1,20 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/flex';
+////////////////////////////////////
+@import './components/header';
+@import './logo/logo';
+//////////////////////////////
+@import './components/slogan';
+@import './components/dignity';
+@import './components/product';
+@import './components/our-team';
+@import './components/clients';
+//////////////////////////////////////////
+@import './components/projects/projects-list-buttons';
+@import './components/projects/projects-list';
+//////////////////////////////////////////////
+@import './components/modal/modal';
+@import './components/form-subscription-footer';
+/////////////////////////////////////////////////
+@import './components/footer';
