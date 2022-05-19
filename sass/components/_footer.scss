@@ -32,7 +32,7 @@
 
   
   .address-mail {
-    @include font(null, 14px, 1.71, 0.03em);
+    @include font(400, 14px, 1.71, 0.03em);
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &.link:hover,
     &.link:active,
@@ -42,7 +42,7 @@
     
   }
   .address-tel {
-    @include font(null, 14px, 1.71, 0.03em);
+    @include font(400, 14px, 1.71, 0.03em);
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &.link:active,
     &.link:hover,

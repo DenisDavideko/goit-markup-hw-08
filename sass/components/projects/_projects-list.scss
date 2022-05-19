@@ -16,7 +16,7 @@
   
   .project__type {
     font-style: normal;
-    @include font(null, 16px, 1.88, 0.03em);
+    @include font(400, 16px, 1.88, 0.03em);
     color: var(--color-grey);
   }
   .grid {
@@ -49,7 +49,7 @@
   
   .projects__text{
     position: absolute;
-    @include font(null, 18px, 1.56, 0.03em);
+    @include font(400, 18px, 1.56, 0.03em);
     color: var(--color-white);
     top: 0;
     left: 0;

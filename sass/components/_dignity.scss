@@ -1,42 +1,51 @@
-  .dignity{
+.dignity {
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
-  
-  .dignity__item{
-    width: 270px;
-    margin-right: 30px; 
-    &:last-child{
-      margin-right: 0px
+}
+
+.dignity__item {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0px;
     }
   }
-  
-  
-  .dignity__title {
-    font-style: normal;
-    @include font(700, 14px, 1.14, 0.03em);
-    text-transform: uppercase;
-    color: var(--color-black);
-    
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 354px;
   }
-  
-  .dignity__title--indent{
-    margin-bottom: 10px;
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: 270px;
   }
-  
-  .dignity__text {
-    
-    font-style: normal;
-    @include font(null, 14px, 1.71, 0.03em);
-    color: var(--color-grey);
+}
+
+.dignity__title {
+  font-style: normal;
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
   }
-  .dignity__logo{
-    @extend %flex;
-    width: 270px;
-    height: 120px;
-    background: #F5F4FA;
-    border-radius: 4px;
-  
-  }
-  .dignity__logo--indent{
-    margin-bottom: 30px;
-  }
+  margin-bottom: 10px;
+}
+
+
+.dignity__text {
+  font-style: normal;
+  @include font(400, 14px, 1.71, 0.03em);
+  color: var(--color-grey);
+}
+.dignity__logo {
+  @extend %flex;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
