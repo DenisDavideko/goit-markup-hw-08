@@ -1,130 +1,158 @@
-.header-container{
+.header-container {
   display: flex;
   align-items: center;
-  color:var(--color-grey);
- }
-.header{
+  color: var(--color-grey);
+}
+.header {
   border-bottom: 1px solid #ececec;
 }
-.container{ 
+.container {
   max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: 768px)    
-    {max-width: 768px;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
   }
 
-  @media screen and (min-width: 1200px)    
-    {max-width: 1200px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
   }
   outline: 1px solid red;
 }
 
-.section{
-  padding: 94px 0;
-}
+// .section{
+//   padding: 94px 0;
+// }
 
 .menu-log {
   display: flex;
   align-items: center;
-  }
+}
 
 .menu {
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--color-black);
   display: flex;
-  align-items:center;
-  .contacts{
+  align-items: center;
+  .menu-contacts {
     display: flex;
   }
   .link:active,
   .link:hover,
   .link:focus,
   .link:active {
-  color:var(--color-hover);
-  }
-}
-.menu-link{
-  display: block;
-  position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--color-black);
-  .current::after{
-    display:block; 
-    position:absolute;
-    content: ''; 
-    left: 0;
-    bottom: 0;
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
-    border-bottom:  4px  solid #2196F3 ;
-    transform: translateY(1px);
-  }
-  .current{
     color: var(--color-hover);
   }
 }
-
-.menu-list{
+.menu-items {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.menu-link {
+  display: block;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--color-black);
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+ 
+}
+.menu-link.current::after {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  border-bottom: 4px solid #2196f3;
+  transform: translateY(1px); 
+}
+.menu-link.current{
+  color: var(--color-hover);
+}
+.menu-list {
   margin-right: 50px;
-  &:last-child{
+  &:last-child {
     margin-right: 0px;
   }
 }
 
-
 /* ------------------ contacts----------------*/
 
-.contacts {
-  @include font(500, 14px, 1.14, 0.02em);
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  
-}
-.contacts-link{
-  display: flex;
-  align-items: center;
-  color:currentColor;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// .contacts {
+//   @include font(500, 14px, 1.14, 0.02em);
+//   margin-left: auto;
+//   display: flex;
+//   align-items: center;
+// }
 
+.menu-contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
-.tel-icon,.mail-icon{
-  transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+.contacts-link {
+  display: flex;
+  align-items: center;
+  color: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include font(500, 14px, 1.14, 0.02em);
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
-.mail-icon,.tel-icon{
+
+.tel-icon,
+.mail-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mail-icon,
+.tel-icon {
   fill: var(--color-grey);
   margin-right: 10px;
 }
 
-.contacts-item{
-  margin-right: 30px;
-  &:last-child{
-    margin-right:0px;
-  }
-  &:hover{
-    .mail-icon{
-      fill:var(--color-hover);
+.contacts-item {
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
     }
-  } 
-  .link:hover{
-    color:var(--color-hover);
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &:hover {
+    .mail-icon {
+      fill: var(--color-hover);
+    }
+  }
+  .link:hover {
+    color: var(--color-hover);
   }
   &:hover {
-    .tel-icon{
-      fill:var(--color-hover);
+    .tel-icon {
+      fill: var(--color-hover);
     }
   }
 }
-
-
-
-
