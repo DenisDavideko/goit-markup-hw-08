@@ -1,11 +1,25 @@
+.header {
+  
+  border-bottom: 1px solid #ececec;
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+  }
+}
+.header-container-menu{
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .header-container {
   display: flex;
   align-items: center;
   color: var(--color-grey);
 }
-.header {
-  border-bottom: 1px solid #ececec;
-}
+
+
+
 .container {
   max-width: 480px;
   padding-left: 15px;
