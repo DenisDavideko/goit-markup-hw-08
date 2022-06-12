@@ -1,13 +1,36 @@
   .buttons-list {
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-top: 60px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      padding-top: 94px;
+      margin-bottom: 50px;
+      
+    }
+
   }
   .buttons-list__item--right{
     margin-right: 8px;
+    margin-bottom: 15px;
     &:nth-child(5){
       margin-right: 0px;
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0px;
+
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0px;
     }
   }
 

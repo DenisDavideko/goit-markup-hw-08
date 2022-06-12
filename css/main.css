@@ -806,7 +806,7 @@ img {
 }
 
 .team-social-link:hover {
-  background-color: var(--color-hover);
+  background: var(--color-hover);
   border-radius: 50%;
 }
 
@@ -822,17 +822,42 @@ img {
 
 .clients {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--color-black);
   margin: 0 auto;
-  margin-bottom: 50px;
+  padding-bottom: 30px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+}
+
+.clients-brand {
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-brand {
+    padding-bottom: 94px;
+  }
 }
 
 .clients-brand__link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -856,12 +881,16 @@ img {
   fill: var(--color-hover);
 }
 
-.clients-brand__item--indent {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .clients-brand__link {
+    width: 226px;
+  }
 }
 
-.clients-brand__item--indent:last-child {
-  margin-right: 0px;
+@media screen and (min-width: 1200px) {
+  .clients-brand__link {
+    width: 170px;
+  }
 }
 
 .clients-brand__icon {
@@ -878,18 +907,57 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .buttons-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 94px;
+    margin-bottom: 50px;
+  }
 }
 
 .buttons-list__item--right {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .buttons-list__item--right:nth-child(5) {
   margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons-list__item--right {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .buttons-list__item--right {
+    margin-bottom: 0px;
+  }
 }
 
 .buttons-list__label {
@@ -978,6 +1046,19 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    padding-bottom: 94px;
+  }
 }
 
 .project__img {
@@ -985,7 +1066,6 @@ img {
 }
 
 .project {
-  margin: 0 30px 30px 0;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1011,6 +1091,31 @@ img {
           transform: translateY(0);
 }
 
+@media screen and (max-width: 767px) {
+  .project {
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
+    margin-bottom: 30px;
+  }
+  .project:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project {
+    -ms-flex-preferred-size: 354px;
+        flex-basis: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project {
+    -ms-flex-preferred-size: 370px;
+        flex-basis: 370px;
+  }
+}
+
 .projects__text {
   position: absolute;
   font-weight: 400;
@@ -1020,7 +1125,7 @@ img {
   color: var(--color-white);
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   background: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1028,6 +1133,18 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .projects__text {
+    padding: 49px 24px 77px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__text {
+    padding: 63px 24px;
+  }
 }
 
 .project__overlay {
