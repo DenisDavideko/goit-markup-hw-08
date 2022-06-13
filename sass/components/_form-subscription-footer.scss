@@ -19,12 +19,23 @@
     &:focus {
     background: #188ce8;
     }
+    @media screen and (min-width: 480px) {
+     margin-top: 20px;
+    }
   }
   
   .footer-form-title{
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color:var(--color-white);
+    @media screen and (min-width: 480px) {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
   }
   .footer-form-icon{
     right: 28px;
@@ -62,8 +73,17 @@
     display: block;
   }
   .footer-form-bloc{
-    display: flex;
-    padding-top: 20px;
     
+    @media screen and (min-width: 480px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+   
+    }
   }
   

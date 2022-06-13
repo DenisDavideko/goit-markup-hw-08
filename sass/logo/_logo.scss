@@ -1,17 +1,24 @@
   .logo {
     font-family: Raleway, sans-serif;
-    @include font(700, 26px, 1.19, 0.03em);
+    @include font(700, 24px, 1.17, 0.03em);
     color:var(--color-logo);
     margin-right: 93px;
+    @media screen and (min-width: 1200px) {
+      @include font(700, 26px, 1.17, 0.03em);
+    }
   }
   
   .logo-contacts {
-    width: 145px;
+    width: 154px;
     font-family: Raleway, sans-serif;
-    @include font(700, 26px, 1.19, 0.03em);
+    @include font(700, 24px, 1.17, 0.03em);
     color: var(--color-logo);
     margin-bottom: 20px;
     display: flex;
+    @media screen and (min-width: 1200px) {
+      @include font(700, 26px, 1.17, 0.03em);
+      width: 145px;
+    }
     
   }
   
