@@ -9,12 +9,24 @@
 
   @media screen and (min-width: 480px) {
     display: flex;
-  flex-direction: column;
+    flex-direction: column;
     align-items: center;
   }
+  
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
     display: block;
+  }
+}
+.footer-contacts_group{
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
   }
 }
 
@@ -37,8 +49,9 @@
     align-items: center;
     margin-bottom: 60px;
   }
+  
   @media screen and (min-width: 1200px) {
-   display: block;
+    display: block;
   }
 }
 .address-item {
@@ -79,6 +92,10 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+
 }
 .footer-social-link {
   width: 44px;

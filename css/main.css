@@ -344,7 +344,14 @@ img {
 }
 
 .mobile-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   top: 0;
   left: 0;
   -webkit-transform: translateX(100%);
@@ -365,7 +372,7 @@ img {
 }
 
 .mobile-menu-contacts {
-  margin-top: 180px;
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
@@ -1540,6 +1547,7 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 60px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1559,12 +1567,10 @@ a {
 }
 
 .footer-form-input {
-  width: 358px;
   padding: 15px 16px;
   background-color: #2F303A;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  margin-right: 12px;
   outline: transparent;
   cursor: pointer;
   -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1601,6 +1607,25 @@ a {
 
 .footer-form-input:focus, .footer-form-input:hover {
   border-color: var(--color-hover);
+}
+
+@media screen and (min-width: 480px) {
+  .footer-form-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-input {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .footer-form-email {
@@ -1672,6 +1697,30 @@ a {
   .container-contacts {
     margin-right: 70px;
     display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-contacts_group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-contacts_group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1768,6 +1817,14 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-footer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .footer-social-link {

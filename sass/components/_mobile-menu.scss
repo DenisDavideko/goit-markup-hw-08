@@ -30,8 +30,9 @@
 
 
 .mobile-menu {
-
+  display: flex;
   position: fixed;
+  flex-direction: column;
   top: 0;
   left: 0;
   transform: translateX(100%);
@@ -46,7 +47,7 @@
 }
 
 .mobile-menu-contacts {
-  margin-top: 180px;
+  margin-top: auto;
   margin-bottom: 64px;
   
 }
