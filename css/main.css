@@ -327,6 +327,23 @@ img {
   }
 }
 
+.mobile-menu-icon {
+  position: absolute;
+  cursor: pointer;
+  fill: #000000;
+  background-color: transparent;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-icon:focus {
+  fill: var(--color-hover);
+}
+
+.mobile-menu-icon:hover {
+  fill: var(--color-hover);
+}
+
 .mobile-menu-bt .icon-open {
   opacity: 1;
 }
