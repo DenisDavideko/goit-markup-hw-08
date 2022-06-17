@@ -56,7 +56,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -328,6 +327,9 @@ img {
 }
 
 .mobile-menu-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   cursor: pointer;
   fill: #000000;
@@ -369,6 +371,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   top: 0;
   left: 0;
   -webkit-transform: translateX(100%);
@@ -381,6 +386,7 @@ img {
   transition: -webkit-transform 400ms ease-in;
   transition: transform 400ms ease-in;
   transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  z-index: 5;
 }
 
 .mobile-menu.is-open {

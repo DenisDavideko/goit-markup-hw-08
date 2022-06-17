@@ -16,6 +16,7 @@
   }
 }
 .mobile-menu-icon{
+  display: flex;
   position: absolute;
   cursor: pointer;
   fill: #000000;;
@@ -47,6 +48,7 @@
   display: flex;
   position: fixed;
   flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   transform: translateX(100%);
@@ -55,6 +57,7 @@
   height: 100%;
   padding: 48px 40px;
   transition: transform 400ms ease-in;
+  z-index: 5;
 }
 .mobile-menu.is-open {
   transform: translateX(0);
