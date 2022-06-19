@@ -1,76 +1,98 @@
-  .buttons-list {
-    list-style: none;
+.buttons-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  // padding-top: 60px;
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    // padding-top: 60px;
-    @media screen and (min-width: 768px) {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
-      
-    }
-
+    justify-content: center;
+    margin-bottom: 30px;
   }
-  .buttons-list__item--right{
-    margin-right: 8px;
-    margin-bottom: 15px;
-   
-    &:nth-child(n + 3){
-      margin-right: 0px;
-      margin-bottom: 0px;
-    }
-    @media screen and (min-width: 768px) {
-      margin-bottom: 0px;
-
-    }
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 0px;
-    }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
   }
-
-  .buttons-list__label{
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    @include font(500, 16px, 1.63, 0.03em);
-    text-align: center;
-    // letter-spacing: 0.03em;
-    cursor: pointer;
+}
+.buttons-list__item{
+  &:hover {
+    background: var(--color-hover);
+    color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    color: var(--color-black);
-    background: #f5f4fa;
-    border: none;
-    padding: 6px 22px;
-    transition:background 250ms,color 250ms,box-shadow 250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      background: var(--color-hover);
-      color: var(--color-white);
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-    }
-    &:focus {
-      background: var(--color-hover);
-      color: var(--color-white);
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-    }
-    &:active {
-      background: var(--color-hover);
-      color: var(--color-white);
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-    }
-    .current {
-      background: var(--color-hover);
-      color:var(--color-white);
-    }
   }
-  
+  &:focus {
+    background: var(--color-hover);
+    color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+  &:active {
+    background: var(--color-hover);
+    color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}
+.buttons-list__item--right {
+  margin-right: 8px;
+  margin-bottom: 15px;
 
-  
+  &:nth-child(n + 3) {
+    margin-bottom: 0px;
+  }
+  &:nth-child(5) {
+    margin-right: 0px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+  }
+}
+
+.buttons-list__label {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  @include font(500, 16px, 1.63, 0.03em);
+  text-align: center;
+  // letter-spacing: 0.03em;
+  cursor: pointer;
+  border-radius: 4px;
+  color: var(--color-black);
+  background: #f5f4fa;
+  border: none;
+  padding: 6px 22px;
+  transition: background 250ms, color 250ms, box-shadow 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background: var(--color-hover);
+    color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+  &:focus {
+    background: var(--color-hover);
+    color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+  &:active {
+    background: var(--color-hover);
+    color: var(--color-white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+  .current {
+    background: var(--color-hover);
+    color: var(--color-white);
+  }
+}
