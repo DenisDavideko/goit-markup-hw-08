@@ -1,12 +1,15 @@
-.dignity {
+.section-dignity {
   padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+.dignity {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 94px 0;
   }
 }
 
@@ -39,7 +42,6 @@
   }
   margin-bottom: 10px;
 }
-
 
 .dignity__text {
   font-style: normal;
