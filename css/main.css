@@ -941,13 +941,13 @@ img {
   fill: #afb1b8;
 }
 
-.container-clients {
+.section-container-clients {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
-  .container-clients {
+  .section-container-clients {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -1160,13 +1160,13 @@ img {
   color: var(--color-white);
 }
 
-.container-projects {
+.section-projects {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
-  .container-projects {
+  .section-projects {
     padding-top: 94px;
     padding-bottom: 94px;
   }
